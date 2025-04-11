@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hw-3</title>
+    <title>Slider</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <div class="slider dja">
-        <div class="slides">
-        </div>
-        <div class="screen dja">            
-            <div class="play-button dja">
-                <div class="play-icon dja left">&#9664</div>
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+    <input type="radio" name="slider" id="s4">
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="card-list">
+                <div class="card-item">
+                    <img src="./src/images/1.svg" alt="first image" class="image">
+                </div>
+
+                <div class="card-item">
+                    <img src="./src/images/2.svg" alt="first image" class="image">
+                </div>
+
+                <div class="card-item">
+                    <img src="./src/images/3.svg" alt="first image" class="image">
+                </div>
+
+                <div class="card-item">
+                    <img src="./src/images/4.svg" alt="first image" class="image">
+                </div>
             </div>
-            <ul class="round__items">
-                <li class="round__item"></li>
-                <li class="round__item"></li>
-                <li class="round__item"></li>
-            </ul>           
-            <div class="play-button dja">
-                <div class="play-icon dja right">&#9654</div>
-            </div>          
-        </div>        
+        </div>
     </div>
 </body>
 </html>

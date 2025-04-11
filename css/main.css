@@ -1,78 +1,53 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.dja {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 body {
-    background-color: #0E0E0E;
-    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.slider {    
-    width: 100%;
-    max-width: 52rem;
-    height: 100%;
-    max-height: 32rem;
-    background-color: #FEFEFE;    
-    padding-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.screen {
-    width: 90%;
-    height: 90%;
-    background-color: #4FC0E5;    
-    justify-content: space-between;
-    position: relative;
-}
-
-.play-button {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    background-color: #333333;    
-    cursor: pointer;
-    margin: 0 -1.75rem;    
-    position: static;
-}
-
-.play-icon {
-    color: #FFFFFF;
-    font-size: 2.5rem;  
-}
-.screen img {
-    width: 100%;
-    height: 100%;    
-}
-
-.round__items {
-    width: 80%;
-    height: 100%;
-    position: relative;
-    display: flex;
     justify-content: center;
-    align-items: end;    
-    gap: 10px;
+    min-height: 100vh;
 }
 
-.round__item {
-    width: 20px;
-    height: 20px;
-    margin-bottom: -10px;
-    border-radius: 50%;
-    list-style: none;
-    background-color: #333333;
-    display: inline-block;
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 70px 55px;
+    position: relative;
 }
 
+.card-list {
+    display: flex;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.card-list .card-item {
+    background: rgba(75, 71, 71, 0.2);
+    border: 1px solid rgba(12, 225, 90, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    width: 100%;
+    padding: 35px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+.card-list .card-item .image {
+    width: 650px;
+    height: 450px;
+    margin: 0 75px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 5px;
+}
+
+#s1:checked ~ .card-list .card-item {transform: translateX(0%);}
+#s2:checked ~ .card-list .card-item {transform: translateX(-100%);}
+#s3:checked ~ .card-list .card-item {transform: translateX(-200%);}
+#s4:checked ~ .card-list .card-item {transform: translateX(-300%);}
